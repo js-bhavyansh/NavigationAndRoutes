@@ -107,3 +107,9 @@ This clears the entire back stack and navigates to `IntroPage`, making it the on
   ```
 
   This navigates to `HomePage` and removes all other routes from the stack.
+
+## Contact
+
+For questions or feedback, please contact [@Bhavyansh03-tech](https://github.com/Bhavyansh03-tech) on GitHub or connect with me on [LinkedIn](https://www.linkedin.com/in/bhavyansh03/).
+
+---
