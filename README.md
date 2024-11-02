@@ -108,6 +108,17 @@ This clears the entire back stack and navigates to `IntroPage`, making it the on
 
   This navigates to `HomePage` and removes all other routes from the stack.
 
+### Navigate and Remove Specific Screens from Back Stack
+If you want to navigate to a screen and remove only specific screens from the stack (e.g., `'/login'` and `'/signup'`):
+
+```dart
+Navigator.pushNamedAndRemoveUntil(
+  context,
+  '/login',
+  (route) => route.settings.name != '/login' && route.settings.name != '/signup',
+);
+```
+
 ## Contact
 
 For questions or feedback, please contact [@Bhavyansh03-tech](https://github.com/Bhavyansh03-tech) on GitHub or connect with me on [LinkedIn](https://www.linkedin.com/in/bhavyansh03/).
