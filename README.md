@@ -119,6 +119,32 @@ Navigator.pushNamedAndRemoveUntil(
 );
 ```
 
+## Passing Arguments Between Screens
+Flutter allows you to pass data between screens when navigating using `Navigator.pushNamed` or similar methods. Below is a demonstration of how to pass and retrieve arguments.
+
+### Passing Arguments
+To pass arguments when navigating to a screen, use the `arguments` parameter:
+```dart
+Navigator.pushNamed(
+  context,
+  '/intro_page',
+  arguments: {
+    'title': 'Welcome to Intro Page',
+    'description': 'This is an example of passing arguments in Flutter.',
+  },
+);
+```
+
+### Retrieving Arguments
+In the target screen (`IntroPage` in this case), retrieve the arguments using `ModalRoute.of(context)?.settings.arguments`:
+```dart
+// Retrieve the arguments passed during navigation
+    final args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+
+    final title = args['title'] ?? 'Default Title';
+    final description = args['description'] ?? 'Default Description';
+```
+
 ## Contact
 
 For questions or feedback, please contact [@Bhavyansh03-tech](https://github.com/Bhavyansh03-tech) on GitHub or connect with me on [LinkedIn](https://www.linkedin.com/in/bhavyansh03/).
